@@ -1,0 +1,359 @@
+{
+	"name": "vue-quick-i18n",
+	"displayName": "vue-quick-i18n",
+	"description": "quick i18n plugin for vue developer",
+	"publisher": "GolderBrother",
+	"keywords": [
+		"vue",
+		"vue i18n",
+		"vue-i18n",
+		"fast i18n",
+		"i18n tool",
+		"i18n",
+		"developer-tool"
+	],
+	"version": "0.4.2",
+	"engines": {
+		"vscode": "^1.37.1"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"icon": "icon.png",
+	"activationEvents": [
+		"*"
+	],
+	"main": "dist/extension.cjs.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "vueQuickI18n.openI18nFile",
+				"title": "Open File"
+			},
+			{
+				"command": "vueQuickI18n.flatJson",
+				"title": "Flat Json"
+			},
+			{
+				"command": "vueQuickI18n.unFlatJson",
+				"title": "UnFlat Json"
+			},
+			{
+				"command": "vueQuickI18n.showI18n",
+				"title": "Show I18n Translate Detail"
+			},
+			{
+				"command": "vueQuickI18n.updateI18n",
+				"title": "Update I18n Locales Json"
+			},
+			{
+				"command": "vueQuickI18n.generateRichieRC",
+				"title": "Generate scope config file"
+			},
+			{
+				"command": "vueQuickI18n.quickI18n",
+				"title": "Quick I18n local",
+				"icon": {
+					"light": "./icon-light.svg",
+					"dark": "./icon-dark.svg"
+				}
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Vue-Quick-I18n",
+			"properties": {
+				"vueQuickI18n.defaultLocalesPath": {
+					"type": "string",
+					"default": "src/locales",
+					"description": "Specify the 'locales' folder path for vue-quick-i18n. \n (expect 'string', default 'src/locales')"
+				},
+				"vueQuickI18n.doNotDisturb": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether alert tips when executing command '. \n (expect 'boolean', default false )"
+				},
+				"vueQuickI18n.i18nValueHover": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether show i18n value for hover key in vue or js file'.\n (expect 'boolean', default true )"
+				},
+				"vueQuickI18n.langFile": {
+					"type": "string",
+					"default": "zh-cn.json",
+					"description": "file name for locales json'. \n (expect 'string', default zh-cn.json )"
+				},
+				"vueQuickI18n.puidType": {
+					"type": "string",
+					"default": "short",
+					"description": "Long or short type puid in locales json'. \n (expect 'string', default zh-cn.json )"
+				},
+				"vueQuickI18n.fileNameSubstitute": {
+					"type": "string",
+					"default": "components",
+					"description": "The substitute for fileName, when  'notUseFileNameAsKey' is true, it will work . \n (expect 'string', default components )"
+				},
+				"vueQuickI18n.modulePrefixFoUpdateJson": {
+					"type": "string",
+					"default": "",
+					"description": "command 'Update I18n Locales Json' properties key with it. \n (expect 'string', such as '' or 'hello-world' )"
+				},
+				"vueQuickI18n.notAlertBeforeUpdateI18n": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether alert tip before executing command 'Update I18n Locales Json'. \n (expect 'boolean', default false )"
+				},
+				"vueQuickI18n.notUseFileNameAsKey": {
+					"type": "boolean",
+					"default": false,
+					"description": "Don't use file name as key. \n (expect 'boolean', default false )"
+				},
+				"vueQuickI18n.parentDirLevel": {
+					"type": "number",
+					"default": 1,
+					"description": "The folder level which will be addded to the begin of json key'. \n (expect 'number', default 1 )"
+				}
+			}
+		},
+		"keybindings": [
+			{
+				"command": "vueQuickI18n.generateRichieRC",
+				"key": "ctrl+alt+g",
+				"mac": "ctrl+cmd+g",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "vueQuickI18n.updateI18n",
+				"key": "ctrl+alt+u",
+				"mac": "ctrl+cmd+u",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "vueQuickI18n.quickI18n",
+				"key": "ctrl+alt+i",
+				"mac": "ctrl+cmd+i",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "vueQuickI18n.showI18n",
+				"key": "ctrl+alt+o",
+				"mac": "ctrl+cmd+o",
+				"when": "editorTextFocus"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorFocus && resourceLangId == json",
+					"command": "vueQuickI18n.flatJson",
+					"group": "1_modification@6"
+				},
+				{
+					"when": "editorFocus && resourceLangId == json",
+					"command": "vueQuickI18n.unFlatJson",
+					"group": "1_modification@6"
+				},
+				{
+					"when": "editorFocus &&  resourceLangId == javascript",
+					"command": "vueQuickI18n.generateRichieRC",
+					"group": "1_modification@5"
+				},
+				{
+					"when": "editorFocus &&  resourceLangId == typescript",
+					"command": "vueQuickI18n.generateRichieRC",
+					"group": "1_modification@5"
+				},
+				{
+					"when": "editorFocus &&  resourceLangId == vue",
+					"command": "vueQuickI18n.generateRichieRC",
+					"group": "1_modification@5"
+				},
+				{
+					"when": "editorFocus &&  resourceLangId == javascript",
+					"command": "vueQuickI18n.updateI18n",
+					"group": "1_modification@6"
+				},
+				{
+					"when": "editorFocus &&  resourceLangId == typescript",
+					"command": "vueQuickI18n.updateI18n",
+					"group": "1_modification@6"
+				},
+				{
+					"when": "editorFocus &&  resourceLangId == vue",
+					"command": "vueQuickI18n.updateI18n",
+					"group": "1_modification@6"
+				},
+				{
+					"when": "editorFocus &&  resourceLangId == javascript",
+					"command": "vueQuickI18n.quickI18n",
+					"group": "1_modification@7"
+				},
+				{
+					"when": "editorFocus &&  resourceLangId == typescript",
+					"command": "vueQuickI18n.quickI18n",
+					"group": "1_modification@7"
+				},
+				{
+					"when": "editorFocus &&  resourceLangId == vue",
+					"command": "vueQuickI18n.quickI18n",
+					"group": "1_modification@7"
+				},
+				{
+					"when": "editorFocus && resourceLangId == vue",
+					"command": "vueQuickI18n.showI18n",
+					"group": "1_modification@8"
+				},
+				{
+					"when": "editorFocus && resourceLangId == javascript",
+					"command": "vueQuickI18n.showI18n",
+					"group": "1_modification@8"
+				},
+				{
+					"when": "editorFocus && resourceLangId == typescript",
+					"command": "vueQuickI18n.showI18n",
+					"group": "1_modification@8"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "vueQuickI18n.generateRichieRC",
+					"when": "resourceLangId == vue",
+					"group": "1_modification@5"
+				},
+				{
+					"command": "vueQuickI18n.generateRichieRC",
+					"when": "resourceLangId == javascript",
+					"group": "1_modification@5"
+				},
+				{
+					"command": "vueQuickI18n.generateRichieRC",
+					"when": "resourceLangId == typescript",
+					"group": "1_modification@5"
+				},
+				{
+					"command": "vueQuickI18n.updateI18n",
+					"when": "resourceLangId == vue",
+					"group": "1_modification@6"
+				},
+				{
+					"command": "vueQuickI18n.updateI18n",
+					"when": "resourceLangId == javascript",
+					"group": "1_modification@6"
+				},
+				{
+					"command": "vueQuickI18n.updateI18n",
+					"when": "resourceLangId == typescript",
+					"group": "1_modification@6"
+				},
+				{
+					"command": "vueQuickI18n.quickI18n",
+					"when": "resourceLangId == vue",
+					"group": "1_modification@7"
+				},
+				{
+					"command": "vueQuickI18n.quickI18n",
+					"when": "resourceLangId == javascript",
+					"group": "1_modification@7"
+				},
+				{
+					"command": "vueQuickI18n.quickI18n",
+					"when": "resourceLangId == typescript",
+					"group": "1_modification@7"
+				},
+				{
+					"command": "vueQuickI18n.showI18n",
+					"when": "resourceLangId == vue",
+					"group": "1_modification@8"
+				},
+				{
+					"command": "vueQuickI18n.showI18n",
+					"when": "resourceLangId == javascript",
+					"group": "1_modification@8"
+				},
+				{
+					"command": "vueQuickI18n.showI18n",
+					"when": "resourceLangId == typescript",
+					"group": "1_modification@8"
+				}
+			]
+		},
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/tt.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/tt.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/tt.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/tt.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/tt.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/tt.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/tt.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/tt.json"
+			}
+		]
+	},
+	"scripts": {
+		"test": "node ./test/runTest.js",
+		"docs:dev": "vuepress dev docs",
+		"docs:build": "vuepress build docs --dest=/www/wwwroot/vuequicki18n.golderbrother.top/dist",
+		"vscode:prepublish": "webpack --mode production",
+		"dev": "webpack --mode development",
+		"dev:w": "webpack --mode development --watch"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.10.2",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.14.14",
+		"@types/vscode": "^1.37.0",
+		"eslint": "^5.13.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.2.0",
+		"terser-webpack-plugin": "^3.0.2",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.1.0",
+		"vuepress": "^1.5.2",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.11"
+	},
+	"dependencies": {
+		"flat": "^4.1.0",
+		"json-to-ast": "^2.1.0",
+		"mkdirp": "^0.5.1",
+		"puid": "^1.0.7",
+		"safe-eval": "^0.4.1",
+		"sort-json": "^2.0.0",
+		"sort-package-json": "^1.40.0",
+		"unflatten": "^1.0.4",
+		"validator": "^12.1.0"
+	},
+	"bugs": {
+		"url": "https://github.com/GolderBrother/vue-quick-i18n/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/GolderBrother/vue-quick-i18n"
+	},
+	"homepage": "https://github.com/GolderBrother/vue-quick-i18n/blob/master/README.md"
+}
