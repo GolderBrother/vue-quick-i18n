@@ -91,3 +91,5 @@
 
 ### 1. vscode 正则  `[\u4e00-\u9fa5]` 查找汉字
 ### 2. vscode 插件 expand-region 来扩展选择,方便选中复制
+
+### 3. [VSCode插件开发全攻略（十）打包、发布、升级](http://blog.haoji.me/vscode-plugin-publish.html)
