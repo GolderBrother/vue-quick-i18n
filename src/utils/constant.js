@@ -7,7 +7,7 @@ const constants = {
 		fontStyle: "italic",
 		// textDecoration: "underline solid red"
 	},
-	langArr: ["javascript", "typescript", "vue"],
+	langArr: ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
 	operation: {
 		flatJson: { cmd: "vueQuickI18n.flatJson", title: "Flat Json" },
 		unFlatJson: { cmd: "vueQuickI18n.unFlatJson", title: "unFlat Json" },

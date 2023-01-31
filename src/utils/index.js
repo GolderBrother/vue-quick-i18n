@@ -125,7 +125,9 @@ const getPrefix = currentEditor => {
 		js: '.js',
 		ts: '.ts',
 		javascript: '.js',
+		javascriptreact: '.js',
 		typescript: '.ts',
+		typescriptreact: '.ts',
 	};
 	const extName = languageExtNameMap[currentEditor.document.languageId] || ".js";
 	// const fileName =

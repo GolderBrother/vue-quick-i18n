@@ -42,7 +42,7 @@ module.exports = (currentEditor, puidType) => {
 	if (!currentEditor || !currentEditor.document) return {};
 	const { lineCount, languageId, lineAt } = currentEditor.document;
 	// const isJavascript = languageId === "javascript";
-	const isJavascript = ['javascript', 'typescript'].includes(languageId);
+	const isJavascript = ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'].includes(languageId);
 	const isVue = languageId === "vue";
 	const { template, script } = getRange(currentEditor);
 	const lines = [];
