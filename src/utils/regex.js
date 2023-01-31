@@ -2,6 +2,8 @@
 //欢迎使用JavaScript中的RegExp的众多陷阱之一，当flag 是global时，第二次使用它将会从第一次匹配到的lastIndex开始查。。。
 //所以只要是变量赋值多次使用的Regexp，都需要使用match，或者在使用完test,exec之后重置lastIndex
 
+// TODO 1、这里应该支持字母+汉字
+// 2、支持批量转换文件
 //约定:所有汉字匹配均以汉字开头,所有正则针对 单行匹配
 const spaceRegexp = /\s/g;
 const firstSpaceRegexp = /\s+/;
@@ -10,7 +12,7 @@ const angleBracketsRegexp = /[\<|\>]/g;
 const templateBeginRegexp = /\<template/g;
 const templateEndRegexp = /\<\/template/g;
 const scriptBeginRegexp = /\<script/g;
-const scripteEndRegexp = /\<\/script/g;
+const scriptEndRegexp = /\<\/script/g;
 
 //只匹配单行注释，多行注释不考虑
 const commentRegexp = /(\/\/)|(<!--)|(\/\*)/g;
@@ -34,7 +36,7 @@ module.exports = {
 	templateBeginRegexp,
 	templateEndRegexp,
 	scriptBeginRegexp,
-	scripteEndRegexp,
+	scriptEndRegexp,
 	scriptRegexp,
 	propertyRegexp,
 	angleBracketSpaceRegexp,

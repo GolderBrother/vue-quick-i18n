@@ -18,7 +18,7 @@ const {
 	templateBeginRegexp,
 	templateEndRegexp,
 	scriptBeginRegexp,
-	scripteEndRegexp,
+	scriptEndRegexp,
 } = require("./regex");
 const {
 	langArr,
@@ -216,7 +216,7 @@ const getRange = editor => {
 		});
 		const sEnd = getCellRange({
 			editor,
-			regex: scripteEndRegexp,
+			regex: scriptEndRegexp,
 			line: i,
 		});
 		if (tBegin) {
