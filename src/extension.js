@@ -4,6 +4,7 @@ const quickI18n = require('./quickI18n');
 const showI18n = require('./showI18n');
 const flatJson = require('./flatJson');
 const updateI18n = require('./updateI18n');
+const updateAllI18n = require('./updateAllI18n');
 const hoverI18n = require('./hoverI18n');
 const openI18nFile = require('./openI18nFile');
 const generateRichieRC = require('./generateRichieRC');
@@ -25,6 +26,9 @@ function activate(context) {
 
 	// generate i18n json by regexp
 	updateI18n(context);
+
+	// generate all i18n json by regexp
+	updateAllI18n(context);
 
 	// hover show i18n detail
 	hoverI18n(context);

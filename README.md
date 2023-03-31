@@ -1,16 +1,16 @@
 # Vue i18n
 
-[![](https://vsmarketplacebadge.apphb.com/version/GolderBrother.vue-quick-i18n.svg)](https://marketplace.visualstudio.com/items?itemName=GolderBrother.vue-quick-i18n)
+<!-- [![](https://vsmarketplacebadge.apphb.com/version/GolderBrother.vue-quick-i18n.svg)](https://marketplace.visualstudio.com/items?itemName=GolderBrother.vue-quick-i18n)
 [![](https://vsmarketplacebadge.apphb.com/installs-short/GolderBrother.vue-quick-i18n.svg)](https://marketplace.visualstudio.com/items?itemName=GolderBrother.vue-quick-i18n)
 [![](https://vsmarketplacebadge.apphb.com/downloads-short/GolderBrother.vue-quick-i18n.svg)](https://marketplace.visualstudio.com/items?itemName=GolderBrother.vue-quick-i18n)
 [![](https://vsmarketplacebadge.apphb.com/rating-short/GolderBrother.vue-quick-i18n.svg)](https://marketplace.visualstudio.com/items?itemName=GolderBrother.vue-quick-i18n)
-[![](https://vsmarketplacebadge.apphb.com/trending-monthly/GolderBrother.vue-quick-i18n.svg)](https://marketplace.visualstudio.com/items?itemName=GolderBrother.vue-quick-i18n)
+[![](https://vsmarketplacebadge.apphb.com/trending-monthly/GolderBrother.vue-quick-i18n.svg)](https://marketplace.visualstudio.com/items?itemName=GolderBrother.vue-quick-i18n) -->
 
 
 ## ✨ 快速开始
 ![vue-quick-i18n](quick.gif)
 
-## 契子
+## 例子
 
 现有项目国际化非常的繁琐:
 
@@ -21,7 +21,7 @@
 
 ## 设计
 
-![design.png](https://cdn.nlark.com/yuque/0/2020/png/111625/1582165204110-151c4717-556e-443e-8975-cb29cbcbe83f.png "design")
+![feature](feature.png)
 
 ## 插件功能
 

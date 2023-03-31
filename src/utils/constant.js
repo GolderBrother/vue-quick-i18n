@@ -19,6 +19,14 @@ const constants = {
 			cmd: "vueQuickI18n.updateI18n",
 			title: "Update I18n Locales Json",
 		},
+		updateAllI18n: {
+			cmd: "vueQuickI18n.updateAllI18n",
+			title: "Update All I18n Locales",
+		},
+		quickAllI18n: {
+			cmd: "vueQuickI18n.quickAllI18n",
+			title: "Quick All I18n Locales",
+		},
 		generateRichieRC: {
 			cmd: "vueQuickI18n.generateRichieRC",
 			title: "Generate scope config file",
@@ -44,7 +52,6 @@ const constants = {
 		notUseFileNameAsKey: false,
 		parentDirLevel: 1,
 	},
-
 	pkgFileName: "package.json",
 	customConfigFileName: "richierc.json",
 };

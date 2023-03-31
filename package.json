@@ -12,7 +12,7 @@
 		"i18n",
 		"developer-tool"
 	],
-	"version": "0.4.5",
+	"version": "0.4.6",
 	"engines": {
 		"node": "^16",
 		"npm": ">=8.0.0",
@@ -31,35 +31,35 @@
 		"commands": [
 			{
 				"command": "vueQuickI18n.openI18nFile",
-				"title": "Open File"
+				"title": "QuickI18n:Open File"
 			},
 			{
 				"command": "vueQuickI18n.flatJson",
-				"title": "Flat Json"
+				"title": "QuickI18n:Flat Json"
 			},
 			{
 				"command": "vueQuickI18n.unFlatJson",
-				"title": "UnFlat Json"
+				"title": "QuickI18n:UnFlat Json"
 			},
 			{
 				"command": "vueQuickI18n.showI18n",
-				"title": "Show I18n Translate Detail"
+				"title": "QuickI18n:Show I18n Translate Detail"
 			},
 			{
 				"command": "vueQuickI18n.updateI18n",
-				"title": "Update I18n Locales Json"
+				"title": "QuickI18n:Chinese Mark"
 			},
 			{
 				"command": "vueQuickI18n.updateAllI18n",
-				"title": "Update All I18n Locales Json1"
+				"title": "QuickI18n:Update All I18n Locales Json1"
 			},
 			{
 				"command": "vueQuickI18n.generateRichieRC",
-				"title": "Generate scope config file"
+				"title": "QuickI18n:Generate scope config file"
 			},
 			{
 				"command": "vueQuickI18n.quickI18n",
-				"title": "Quick I18n local",
+				"title": "QuickI18n:Chinese Replace",
 				"icon": {
 					"light": "./icon-light.svg",
 					"dark": "./icon-dark.svg"
@@ -383,18 +383,6 @@
 			},
 			{
 				"language": "typescript",
-				"path": "./snippets/tt.json"
-			},
-			{
-				"language": "html",
-				"path": "./snippets/tt.json"
-			},
-			{
-				"language": "html",
-				"path": "./snippets/tt.json"
-			},
-			{
-				"language": "vue-html",
 				"path": "./snippets/tt.json"
 			},
 			{
