@@ -8,7 +8,7 @@
 
 
 ## ✨ 快速开始
-![vue-quick-i18n](quick.gif)
+![vue-quick-i18n](vue-quick-i18n.gif)
 
 ## 例子
 
